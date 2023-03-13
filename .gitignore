@@ -1,2 +1,5 @@
 .vscode/
 .vs/
+db.sqlite3
+__pychache__/
+*.py[oc]
