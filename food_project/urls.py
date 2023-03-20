@@ -15,5 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from food_project.views import Login
 
-urlpatterns = [path("admin/", admin.site.urls), path("menu/", include("menu.urls"))]
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("menu/", include("menu.urls")),
+    path("login/", Login.as_view(), name="loginS"),
+]

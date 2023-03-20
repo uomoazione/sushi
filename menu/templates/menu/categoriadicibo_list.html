@@ -13,6 +13,11 @@
     <a href="{%  url 'menu:dettaglio_categoria' el.id  %}"
       >Visualizza dettaglio</a
     >
+    <a href="{% url 'menu:elimina_categoria' el.id %}"> Elimina </a>
+    <!--elimina e il modifica vanno qua-->
     {% endfor %}
+
+    <hr />
+    <a href="{% url 'menu:nuova_categoria'%}"> Crea nuova </a>
   </body>
 </html>

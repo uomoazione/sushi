@@ -7,15 +7,11 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>dettaglio</h1>
-    {% for el in object_list %}
-    <p>{{el}}</p>
-    <p>
-      <a href="{% url 'menu:lista_categorie' %}">
-        Torna alla lista di categorie
-      </a>
-
-      {% endfor %}
-    </p>
+    <h1>Nuova</h1>
+    <form action="" method="post">
+      {% csrf_token %} {{form.as_p}}
+      <input type="submit" value="Salva" />
+    </form>
+    <a href="{% url 'menu:lista_categorie'%}"> Torna indietro </a>
   </body>
 </html>
